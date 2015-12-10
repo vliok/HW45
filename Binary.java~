@@ -88,17 +88,15 @@ public class Binary {
       decToBinR(14) -> "1110"
       =====================================*/
     public static String decToBinR( int n ) { 
-	String retStr; //declare return String
-
-	//Base cases: n is single digit, 0|1
-	if ( n == 0 )
-	    retStr = "0";
-	else if ( n == 1 )
-	    retStr = "1";
-	//Recursive reduction:
-	else 
-	    retStr = decToBinR( n/2 ) + n % 2;
-	return retStr;
+	if ( n == 0 ) {
+	    return ""; //doesnt work for 0, input 0 returns ""
+	}
+	else if ( n % 2 == 0 ) {
+	    return "0" + decToBinR( n / 2 );
+	}
+	else {
+	    return "1" + decToBinR( n / 2 );
+	}
     }
 
 
