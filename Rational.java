@@ -92,8 +92,8 @@ public class Rational implements Comparable {
 	//So I believe implementing "implements" for Comparable lays a blueprint of functions that require defining within classes that implement it
     public int compareTo( Object other ) {
 
-	if ( ! (other instanceof Rational) )
-	    throw new ClassCastException("\ncompareTo() input not Rational");
+	if ( ! (other instanceof Comparable) )
+	    throw new ClassCastException("\ncompareTo() input not Comparable");
 	    
 	if ( (other == null) )
 	    throw new NullPointerException("\ncompareTo() input is null");

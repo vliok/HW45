@@ -164,8 +164,8 @@ public class Binary implements Comparable{
       =============================================*/
     public int compareTo( Object other ) {
 
-	if ( ! (other instanceof Binary) )
-            throw new ClassCastException("\ncompareTo() input not Binary");
+	if ( ! (other instanceof Comparable) )
+            throw new ClassCastException("\ncompareTo() input not Comparable");
 	
 	if ( (other == null) )
             throw new NullPointerException("\ncompareTo() input is null");

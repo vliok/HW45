@@ -7,11 +7,11 @@
 public interface ListInt {
 
 	//adds an int after the last int
-	void add ( int newVal );
+	void add ( Comparable newVal );
 
 	//inserts an item at index
 	//shifts existing ints to the right
-	void add ( int index, int newVal);
+	void add ( int index, Comparable newVal);
 
 	//removes the item at index
 	//shifts elements left to fill in newly-empted slot
@@ -21,10 +21,10 @@ public interface ListInt {
 	int size ();
 
 	//accessor -- return value at specified index
-	int get (int index);
+	Comparable get (int index);
 
 	//mutator -- set value at index to newVal, 
 	//return old value at index
-	int set (int index, int newVal);
+	Comparable set (int index, Comparable newVal);
 
 }
