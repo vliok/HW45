@@ -98,9 +98,9 @@ public class Rational implements Comparable {
 	if ( (other == null) )
 	    throw new NullPointerException("\ncompareTo() input is null");
 	    
-	if( this.floatValue() == ((Rational)other).floatValue() )
+	if( this.floatValue == ((Comparable)other).floatValue )
 	    return 0;
-	else if( this.floatValue() > ((Rational)other).floatValue() )
+	else if( this.floatValue > ((Comparable)other).floatValue )
 	    return 1;
 	else
 	    return -1;

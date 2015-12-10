@@ -175,7 +175,7 @@ public class Hexadecimal implements Comparable{
 	if ( (other == null) )
             throw new NullPointerException("\ncompareTo() input is null");
 	
-	return this._decNum - ((Hexadecimal)other)._decNum;
+	return this._decNum - ((Comparable)other).decNum;
     }
 
 

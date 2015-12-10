@@ -140,6 +140,13 @@ public class SuperArray implements ListInt{
     //main method for testing
     public static void main( String[] args ) {
 	
+	SuperArray test = new SuperArray();
+	test.add(new Rational(0,1));
+	test.add(new Binary(1));
+	test.add(new Hexadecimal(2));
+
+	System.out.println( test.linSearch(new Binary(1)) );
+	System.out.println( test.isSorted() );
 	
     }//end main
 		

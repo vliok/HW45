@@ -170,7 +170,7 @@ public class Binary implements Comparable{
 	if ( (other == null) )
             throw new NullPointerException("\ncompareTo() input is null");
 	
-        return this._decNum - ((Binary)other)._decNum;
+        return this._decNum - ((Comparable)other)._decNum;
     }
 
 
