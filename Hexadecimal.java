@@ -5,7 +5,7 @@ HW44 -- This or That or Fourteen Other Things
 2015-12-08
 */
 
-public class Hexadecimal {
+public class Hexadecimal implements Comparable{
 
     private int _decNum;
     private String _hexNum;
@@ -171,7 +171,10 @@ public class Hexadecimal {
 
 	if ( ! (other instanceof Hexadecimal) )
 	    throw new ClassCastException("\ncompareTo() input not Hexadecimal");
-
+	
+	if ( (other == null) )
+            throw new NullPointerException("\ncompareTo() input is null");
+	
 	return this._decNum - ((Hexadecimal)other)._decNum;
     }
 
